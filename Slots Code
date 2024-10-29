@@ -1,0 +1,58 @@
+import turtle as n
+import random
+import math
+import time
+currmoney=69
+
+mylist=["arrow", "circle", "classic", "square", "triangle", "turtle"]
+mycolorlist=["blue", "red", "yellow", "purple", "green", "gold"]
+firstshape=n.Turtle()
+firstshape.penup()
+firstshape.goto(100,200)
+firstshape.pendown()
+firstshape.shapesize(5)
+firstshape.color('gold')
+thirst=n.Turtle()
+thirst.penup()
+thirst.goto(0,200)
+thirst.pendown()
+thirst.shapesize(5)
+thirst.color("gold")
+nurgle=n.Turtle()
+nurgle.penup()
+nurgle.goto(-100,200)
+nurgle.pendown()
+nurgle.shapesize(5)
+nurgle.color("gold")
+##how are you today?
+
+for i in range(10):
+    firstshape.shape(random.choice(mylist))
+    thirst.shape(random.choice(mylist))
+    nurgle.shape(random.choice(mylist))
+    time.sleep(0.2)
+
+
+for i in range(10):
+    firstshape.shape(random.choice(mylist))
+    thirst.shape(random.choice(mylist))
+    nurgle.shape(random.choice(mylist))
+    time.sleep(0.2)
+
+s1=firstshape.shape()
+s2=nurgle.shape()
+s3=thirst.shape()
+
+print(firstshape.shape())
+if s1 == s2:
+    print("you win!!!!!")
+elif s1==s3:
+    print("you win!")
+elif s3==s2:
+    print("you win!!!")
+elif s1==s2==s3:
+    print("SUPER WIN!!!")
+else:
+    print("you lose")
+wn = n.Screen()
+wn.mainloop()
